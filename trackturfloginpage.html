@@ -1,0 +1,85 @@
+<html><head>
+    <style>
+        body {
+            background-image: url('farm2.jpg');
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            position: relative;
+        }
+
+        .login-container {
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.5);
+            height: 300px;
+        }
+
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #2E8B57;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: #fff; /* Set the text color to white */
+        }
+        
+        .button-container button {
+            width: 48%;
+            color: #fff; /* Set the text color to white */
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .button-container a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 14px;
+        }
+
+        .button-container a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <div class="login-container"><center><h1><b>Login</b></h1></center>
+            
+            <div class="button-container">
+                <button style="background: linear-gradient(to right, #2E8B57, #1034A6);">Login Page</button>
+                <button><a href="signuppage.html">Sign Up Page</a></button>
+            </div>
+            <input type="text" placeholder="Username" id="username" required="">
+            <input type="password" placeholder="Password" id="password" required="">
+            <button type="submit">Login</button>
+            <p></p>
+            <center>
+                <a href="signuppage.html">Don't have an account? Create one</a>
+            </center>
+        </div>
+    </div>
+
+
+</body></html>
