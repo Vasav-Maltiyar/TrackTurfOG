@@ -1,79 +1,84 @@
-<html><head>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
             background-image: url('khet.jpg');
+            object-fit: cover;
             overflow-y: scroll;
-            margin: 20px; /* Add margin for spacing */
+            margin: 0;
+            font-family: "Poppins", sans-serif;
         }
-        
+
         body::-webkit-scrollbar {
             width: 0;
         }
-        
+
         .container {
             position: relative;
+            padding: 20px; /* Add padding to the whole container */
         }
-        
+
         .heading-container {
             position: absolute;
             top: 20px;
             right: 20px;
-            width: 100%; /* Adjust width for responsiveness */
+            width: 95%; /* Adjust for smaller screens */
+            max-width: 1360px; /* Limit maximum width */
             padding: 20px;
             background-color: rgba(255, 255, 255, 0.5);
             display: flex;
-            justify-content: center; /* Align center horizontally */
-            align-items: center; /* Align center vertically */
+            justify-content: center;
+            align-items: center;
             height: 60px;
         }
-        
+
         .heading-container h1 {
             margin: 0;
         }
-        
-        .overall-data-container {
+
+        .ragi-data-container {
             position: absolute;
             top: 100px;
             right: 20px;
-            width: 100%; /* Adjust width for responsiveness */
+            width: 95%; /* Adjust for smaller screens */
+            max-width: 1360px; /* Limit maximum width */
             padding: 20px;
-            border: 1px solid #ccc; /* Added border */
+            border: 1px solid #ccc;
             border-radius: 5px;
             background-color: rgba(255, 255, 255, 0.5);
-            min-height: 400px; /* Adjust minimum height for responsiveness */
+            height: auto; /* Allow height to adjust */
+            overflow: auto; /* Add scrollbars if content exceeds height */
         }
-        
-        .overall-data-container .page-text {
-            font-weight: bold;
-        }
-        
-        .overall-data-container .next-button {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        
-        /* Media Query for smaller screens */
+
         @media (max-width: 768px) {
+            .container {
+                padding: 10px; /* Reduce padding for smaller screens */
+            }
+
             .heading-container,
-            .overall-data-container {
-                width: 90%; /* Adjust width for smaller screens */
-                margin: 0 auto; /* Center-align on smaller screens */
-                right: 0; /* Remove right positioning */
+            .ragi-data-container {
+                width: 100%; /* Full width for smaller screens */
+                max-width: none; /* Remove the maximum width */
+                position: static; /* Remove absolute positioning */
+                margin-right: 0; /* Remove right margin */
             }
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="heading-container">
-            <h1><b>Overall Data</b></h1>
+            <h1><b>Pearl Millet(Bajra)</b></h1>
         </div>
-        <div class="overall-data-container">
-            <a href="SEEDS.html"><button class="next-button">Next Page</button></a>
+        <div class="ragi-data-container">
+            <!-- Place your content here -->
         </div>
     </div>
 
+</body>
 
-</body></html>
+</html>
