@@ -1,0 +1,78 @@
+<html><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-image: url('khet.jpg');
+            overflow-y: scroll;
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body::-webkit-scrollbar {
+            width: 0;
+        }
+
+        .container {
+            position: relative;
+        }
+
+        .heading-container {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 100%; /* Adjust for smaller screens */
+            max-width: 1360px; /* Limit maximum width */
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60px;
+        }
+
+        .heading-container h1 {
+            margin: 0;
+        }
+
+        .ragi-data-container {
+            position: absolute;
+            top: 100px;
+            right: 20px;
+            width: 100%; /* Adjust for smaller screens */
+            max-width: 1360px; /* Limit maximum width */
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.5);
+            height: 600px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px; /* Add padding to the whole container */
+            }
+
+            .heading-container,
+            .ragi-data-container {
+                width: 90%; /* Adjust for smaller screens */
+                max-width: none; /* Remove the maximum width */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="heading-container">
+            <h1><b>Pearl Millet(Bajra)</b></h1>
+            <h4><b>Kindly Tilt Your Device Horizontly</b></h4>
+        </div>
+        <div class="ragi-data-container">
+            <!-- Place your content here -->
+        </div>
+    </div>
+
+
+
+
+</body></html>

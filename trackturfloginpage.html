@@ -1,0 +1,107 @@
+<html><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-image: url('khet.jpg');
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 20px; 
+            font-family: "Poppins", sans-serif;
+        }
+
+        .container {
+            position: relative;
+        }
+
+        .login-container {
+            width: 90%; /* Adjust for smaller screens */
+            max-width: 400px; /* Limit maximum width */
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.5);
+            height: auto; /* Allow the height to adjust */
+        }
+
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #2E8B57;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: #fff; /* Set the text color to white */
+        }
+
+        .button-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #2E8B57;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: #fff; /* Set the text color to white */
+            margin-bottom: 10px;
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column; /* Stack buttons on top of each other */
+        }
+
+        .button-container a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 14px;
+            text-align: center; /* Center-align the link text */
+        }
+
+        .button-container a:hover {
+            text-decoration: underline;
+        }
+
+        /* Media Query for smaller screens */
+        @media (max-width: 768px) {
+            .login-container {
+                width: 90%; /* Adjust for smaller screens */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="login-container">
+            <center>
+                <h1><b>Login</b></h1>
+            </center>
+
+            <div class="button-container">
+                <button style="background: linear-gradient(to right, #2E8B57, #1034A6);">Login Page</button>
+                <button><a href="signuppage.html">Sign Up Page</a></button>
+            </div>
+            <input type="text" placeholder="Username" id="username" required="">
+            <input type="password" placeholder="Password" id="password" required="">
+            <button type="submit">Login</button>
+            <p></p>
+            <center>
+               
+            </center>
+        </div>
+    </div>
+
+
+
+</body></html>

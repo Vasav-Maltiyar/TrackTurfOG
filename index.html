@@ -1,0 +1,121 @@
+<html><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            background-image: url('khet.jpg');
+            padding: 20px;
+            overflow-y: scroll;
+        }
+
+        /* Hide scrollbar while allowing scrolling */
+        body::-webkit-scrollbar {
+            width: 0;
+        }
+
+       .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 90%;
+            padding: 20px 100px;
+            background: seagreen;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        
+        }
+
+        .logo {
+            font-size: 24px; /* Smaller font size for logo */
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .navigation-bar {
+           
+            display: flex;
+            justify-content: flex-end; /* Align right */
+        }
+
+        .navigation-bar a {
+            font-size: 16px; /* Smaller font size for links */
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 20px; /* Add margin to separate links */
+        }
+
+        .overall-data-container {
+            position: relative; /* Remove absolute positioning */
+            margin-top: 100px; /* Adjust margin for header */
+            padding: 20px;
+            border: 1px solid #ccc; /* Added border */
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.5);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: calc(2/3 * 100%); /* Maintain 3:2 aspect ratio */
+        }
+
+        .image-container {
+    width: 100%; /* Full width for images */
+    max-width: 400px; /* Limit image width */
+    height: calc(2/3 * 100%); /* Maintain 3:2 aspect ratio */
+    margin: 10px 0; /* Adjust margin for spacing */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+        /* Media Query for smaller screens */
+        @media (max-width: 768px) {
+            .header {
+                padding: 10px; /* Smaller padding for header */
+            }
+
+            .logo {
+                font-size: 20px; /* Adjust font size */
+            }
+
+            .navigation-bar {
+                justify-content: center; /* Center-align links */
+                margin-top: 10px; /* Add margin */
+            }
+
+            .navigation-bar a {
+                font-size: 14px; /* Smaller font size */
+                margin: 0 10px; /* Adjust margin for spacing */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Logo</a>
+        <nav class="navigation-bar">
+            <a href="homepage.html">Home</a>
+            <a href="trackturfloginpage.html">Login</a>
+            <a href="OurTeam.html">Our Team</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+    <div class="overall-data-container">
+        <center><h1><b>Our Products</b></h1></center>
+        <div class="image-container">
+            <a href="#"><img src="photo.jpg" alt="Product Image"></a>
+            <h2><b>SEEDS-Soil and Environmental Evaluation with Data System</b></h2>
+        </div>
+    </div>
+
+
+</body></html>

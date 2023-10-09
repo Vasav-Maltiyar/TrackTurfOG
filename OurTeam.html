@@ -1,0 +1,115 @@
+<html><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-image: url('khet.jpg');
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", sans-serif;
+            
+              overflow-y: scroll;
+           
+            
+        
+        }
+        body::-webkit-scrollbar {
+            width: 0;
+        }
+        
+        .heading-container {
+            width: 100%;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.5);
+            margin: 20px;
+        }
+
+        .main-photo-container {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+        }
+
+        .image-container {
+            width: 45%;
+            max-width: 320px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.5);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .image-container img {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .image-container b {
+            margin: 0;
+        }
+
+        /* Media Query for smaller screens */
+        @media (max-width: 768px) {
+            .image-container {
+                width: 90%;
+            }
+            .main-photo-container {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="heading-container">
+        <h1><b>Our Team</b></h1>
+    </div>
+    <div class="main-photo-container">
+        <div class="image-container">
+            <img src="ishan.jpg">
+            <b>Mr. Ishan Rajvanshi</b>
+            <b>Delhi Public School</b>
+            <b>Project mentor, ATL Trainer, NITI Ayog</b>
+            <b>ishanrajvanshu@gmail.com</b>
+        </div>
+        <div class="image-container">
+            <img src="aryaman panda(4).jpg">
+            <b>Mr. Aryaman Panda</b>
+            <b>8B</b>
+            <b>Delhi Public School</b>
+            <b>aryamanpanda.ap@gmail.com</b>
+        </div>
+        <div class="image-container">
+            <img src="vasu.jpg">
+            <b>Vasav Maltiyar</b>
+            <b>8C</b>
+            <b>Delhi Public School</b>
+            <b>maltiyarvasav@gmail.com</b>
+        </div>
+        <div class="image-container">
+            <img src="paarth.jpg">
+            <b>Mr. Paarth Khandelwaal</b>
+            <b>8C</b>
+            <b>Delhi Public School</b>
+            <b>paarthkhandelwal112@gmail.com</b>
+        </div>
+    </div>
+
+
+</body></html>
