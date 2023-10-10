@@ -1,84 +1,82 @@
-<!DOCTYPE html>
-<html>
-
-<head>
+<html><head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
-            background-image: url('khet.jpg');
-            object-fit: cover;
-            overflow-y: scroll;
-            margin: 0;
             font-family: "Poppins", sans-serif;
+            background-image: url('khet.jpg');
+            padding: 20px;
+            overflow-y: scroll;
         }
 
+        /* Hide scrollbar while allowing scrolling */
         body::-webkit-scrollbar {
             width: 0;
         }
 
-        .container {
-            position: relative;
-            padding: 20px; /* Add padding to the whole container */
-        }
-
         .heading-container {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            width: 95%; /* Adjust for smaller screens */
-            max-width: 1360px; /* Limit maximum width */
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.5);
+            width: 100%;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            height: 60px;
+            text-align: center;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.5);
+            margin: 20px;
         }
 
-        .heading-container h1 {
+        .heading-container h1,
+        .heading-container h3 {
             margin: 0;
         }
 
-        .ragi-data-container {
-            position: absolute;
-            top: 100px;
-            right: 20px;
-            width: 95%; /* Adjust for smaller screens */
-            max-width: 1360px; /* Limit maximum width */
+        .overall-data-container {
+            position: relative;
+            margin-top: 20px;
             padding: 20px;
             border: 1px solid #ccc;
             border-radius: 5px;
             background-color: rgba(255, 255, 255, 0.5);
-            height: auto; /* Allow height to adjust */
-            overflow: auto; /* Add scrollbars if content exceeds height */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 80vh;
         }
 
-        @media (max-width: 768px) {
-            .container {
-                padding: 10px; /* Reduce padding for smaller screens */
-            }
+        /* Add styles for the button */
+        .bottom-button {
+            position: absolute;
+            bottom: 20px; /* Adjust the distance from the bottom as needed */
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
 
-            .heading-container,
-            .ragi-data-container {
-                width: 100%; /* Full width for smaller screens */
-                max-width: none; /* Remove the maximum width */
-                position: static; /* Remove absolute positioning */
-                margin-right: 0; /* Remove right margin */
-            }
+        /* Media Query for smaller screens */
+        @media (max-width: 768px) {
+            /* Add responsive styles here if needed */
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <div class="heading-container">
-            <h1><b>Pearl Millet(Bajra)</b></h1>
-        </div>
-        <div class="ragi-data-container">
-            <!-- Place your content here -->
-        </div>
+    <div class="heading-container">
+        <h1><b>What Will You Grow Today?</b></h1>
+        <h3><b>Kindly Rotate Your Device Horizontally</b></h3>
+    </div>
+    <div class="overall-data-container">
+        <center>
+            <h1><b>Our Products</b></h1>
+        </center>
+        <!-- Place your content here -->
+
+        <!-- Button placed at the bottom -->
+        <button class="bottom-button">Next Page</button>
     </div>
 
-</body>
 
-</html>
+
+</body></html>
