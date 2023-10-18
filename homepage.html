@@ -6,6 +6,7 @@
             background-image: url('khet.jpg');
             padding: 20px;
             overflow-y: scroll;
+            margin: 0; /* Remove default body margin */
         }
 
         /* Hide scrollbar while allowing scrolling */
@@ -14,14 +15,10 @@
         }
 
         .heading-container {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
             text-align: center;
-            border: 1px solid #ccc;
-            border-radius: 5px;
             background-color: rgba(255, 255, 255, 0.5);
+            padding: 20px;
+            border-radius: 5px;
             margin: 20px;
         }
 
@@ -31,22 +28,17 @@
         }
 
         .overall-data-container {
-            position: relative;
             margin-top: 20px;
             padding: 20px;
+            background-color: rgba(255, 255, 255, 0.5);
             border: 1px solid #ccc;
             border-radius: 5px;
-            background-color: rgba(255, 255, 255, 0.5);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            height: 80vh;
         }
 
         /* Add styles for the button */
         .bottom-button {
-            position: absolute;
-            bottom: 20px; /* Adjust the distance from the bottom as needed */
+            display: block;
+            margin: 20px auto; /* Center align the button */
             padding: 10px 20px;
             background-color: #4CAF50;
             color: #fff;
@@ -57,25 +49,54 @@
 
         /* Media Query for smaller screens */
         @media (max-width: 768px) {
-            /* Add responsive styles here if needed */
+            .heading-container {
+                padding: 10px; /* Reduce padding on smaller screens */
+            }
+
+            .overall-data-container {
+                padding: 10px;
+            }
         }
     </style>
 </head>
-
 <body>
     <div class="heading-container">
         <h1><b>Overall Data</b></h1>
         <h3><b>Kindly Rotate Your Device Horizontally</b></h3>
     </div>
     <div class="overall-data-container">
-       
         <!-- Place your content here -->
-
+        <table>
+            <tbody>
+                <tr>
+                    <th>Moisture Level</th>
+                    <th>Temperature</th>
+                </tr>
+                <tr>
+                    <td>
+                        <iframe width="100%" height="260" style="border: 1px solid #CCCCCC;" src="https://thingspeak.com/channels/2225739/widgets/727408"></iframe>
+                    </td>
+                    <td>
+                        <iframe width="100%" height="260" style="border: 1px solid #CCCCCC;" src="https://thingspeak.com/channels/2225739/widgets/727411"></iframe>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Humidity</th>
+                    <th>CO2</th>
+                </tr>
+                <tr>
+                    <td>
+                        <iframe width="100%" height="260" style="border: 1px solid #CCCCCC;" src="https://thingspeak.com/channels/2225739/widgets/727412"></iframe>
+                    </td>
+                    <td>
+                        <iframe width="100%" height="260" style="border: 1px solid #CCCCCC;" src="https://thingspeak.com/channels/2225739/widgets/727415"></iframe>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
         <!-- Button placed at the bottom -->
         <center><a href="SEEDS.HTML"><button class="bottom-button">Next Page</button></a></center>
     </div>
-
-
 
 
 </body></html>
