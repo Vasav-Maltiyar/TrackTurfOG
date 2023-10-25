@@ -46,6 +46,22 @@
             text-decoration: none;
             font-weight: 500;
             margin-left: 20px; /* Add margin to separate links */
+            position:relative;
+            
+        }
+        
+        .navigation-bar a::before {
+            content: '';
+            position:absolute;
+            top:100%;
+            left:0;
+            width:0;
+            height:2px;
+            background:#fff;
+            transition: .3s;
+        }
+        .navigation-bar a:hover::before{
+            width:100%;  
         }
 
         .overall-data-container {
@@ -71,7 +87,7 @@
     background-color: rgba(255, 255, 255, 0.5);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    
     align-items: center;
     text-align: center;
 }
@@ -79,7 +95,7 @@
 
         /* Media Query for smaller screens */
         @media (max-width: 768px) {
-            .header {
+            header {
                 padding: 10px; /* Smaller padding for header */
             }
 
@@ -96,14 +112,21 @@
                 font-size: 14px; /* Smaller font size */
                 margin: 0 10px; /* Adjust margin for spacing */
             }
+            .image-container {
+                width: 90%;
+            }
+            .main-photo-container {
+                width: 90%;
+            }
+            
         }
     </style>
 </head>
 <body>
     <header class="header">
-        <a href="#" class="logo">Logo</a>
+        <a href="index.html" class="logo">Logo</a>
         <nav class="navigation-bar">
-            <a href="homepage.html">Home</a>
+            <a href="homepage.html">Soil Data</a>
             <a href="trackturfloginpage.html">Login</a>
             <a href="OurTeam.html">Our Team</a>
             <a href="contact.html">Contact Us</a>
@@ -112,10 +135,48 @@
     <div class="overall-data-container">
         <center><h1><b>Our Products</b></h1></center>
         <div class="image-container">
-            <a href="#"><img src="photo.jpg" alt="Product Image"></a>
+            <a href="#"><img src="product.jpg" alt="Product Image"></a>
             <h2><b>SEEDS-Soil and Environmental Evaluation with Data System</b></h2>
         </div>
     </div>
 
 
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
 </body></html>
