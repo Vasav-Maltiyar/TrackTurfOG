@@ -38,9 +38,27 @@
             text-decoration: none;
             font-weight: 500;
             margin-left: 20px; /* Add margin to separate links */
+            position: relative;
         }
+
+        .navigation-bar a::before {
+            content: '';
+            position:absolute;
+            top:100%;
+            left:0;
+            width:0;
+            height:2px;
+            background:#fff;
+            transition: .3s;
+        }
+        .navigation-bar a:hover::before{
+            width:100%;  
+        }
+       
         .thingspeak {
-            scale: .8;
+            scale: .8  ;
+            align-content: left;
+            
            
         }
         /* Hide scrollbar while allowing scrolling */
@@ -59,8 +77,11 @@
             margin: 0;
         }
         .overall-data-container {
+
             margin-top: 20px;
-            padding: 20px;
+            margin-left: 10px;
+            margin-right:10px;
+            padding: 1px;
             background-color: rgba(255, 255, 255, 0.5);
             border: 1px solid #ccc;
             border-radius: 5px;
@@ -103,9 +124,9 @@
 </head>
 <body>
     <header class="header">
-        <a href="#" class="logo">Logo</a>
+        <a href="index.html" class="logo">Logo</a>
         <nav class="navigation-bar">
-            <a href="homepage.html">Home</a>
+            <a href="homepage.html">Soil Data</a>
             <a href="trackturfloginpage.html">Login</a>
             <a href="OurTeam.html">Our Team</a>
             <a href="contact.html">Contact Us</a>
@@ -118,7 +139,7 @@
     <div class="overall-data-container">
         <div class="thingspeak">
         <!-- Place your content here -->
-        <table class="center">
+        <table class="center" border="1px">
             <tbody>
                 <tr>
                     <th>Moisture Level</th>
@@ -127,16 +148,16 @@
                     <th>CO2</th>
                 </tr>
                 <tr>
-                    <td><iframe width="auto" height="auto" style="border: 1px solid #CCCCCC;" src="https://thingspeak.com/channels/2225739/widgets/727408" scrolling="no" ></iframe></td>
-                    <td><iframe width="auto" height="auto" style="border: 1px solid #CCCCCC;" src="https://thingspeak.com/channels/2225739/widgets/727411" scrolling="no"></iframe></td>
-                    <td><iframe width="auto" height="auto" style="border: 1px solid #CCCCCC;" src="https://thingspeak.com/channels/2225739/widgets/727412" scrolling="no"></iframe></td>
-                    <td><iframe width="auto" height="auto" style="border: 1px solid #CCCCCC;" src="https://thingspeak.com/channels/2225739/widgets/727415" scrolling="no"></iframe></td>
+                    <td><iframe width="100%" height="260" style="border: 1px solid #CCCCCC;" src="https://thingspeak.com/channels/2225739/widgets/727408" scrolling="no" ></iframe></td>
+                    <td><iframe width="100%" height="260" style="border: 1px solid #CCCCCC;" src="https://thingspeak.com/channels/2225739/widgets/727411" scrolling="no"></iframe></td>
+                    <td><iframe width="100%" height="260" style="border: 1px solid #CCCCCC;" src="https://thingspeak.com/channels/2225739/widgets/727412" scrolling="no"></iframe></td>
+                    <td><iframe width="100%" height="260" style="border: 1px solid #CCCCCC;" src="https://thingspeak.com/channels/2225739/widgets/727415" scrolling="no"></iframe></td>
                 </tr>
                 <tr>
-                    <td><iframe width="auto" height="auto" style="border: 1px solid #CCCCCC;" src="https://thingspeak.com/channels/2225739/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=10&title=SOIL+MOISTURE&type=line&xaxis=TIME&yaxis=MOISTURE+PERCENT&yaxismax=100&yaxismin=0"></iframe></td>
-                    <td><iframe width="auto" height="auto" style="border: 1px solid #CCCCCC;" src="https://thingspeak.com/channels/2225739/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=10&title=TEMPERATURE&type=line&xaxis=TIME&yaxis=TEMP+%28C%29&yaxismax=50&yaxismin=0"></iframe></td>
-                    <td><iframe width="auto" height="auto" style="border: 1px solid #CCCCCC;" src="https://thingspeak.com/channels/2225739/charts/3?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=10&title=HUMIDITY+GRAPH&type=line&xaxis=TIME&yaxis=HUMIDITY+%28%25%29&yaxismax=100&yaxismin=0"></iframe></td>
-                    <td><iframe width="auto" height="auto" style="border: 1px solid #CCCCCC;" src="https://thingspeak.com/channels/2225739/charts/4?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=10&title=CO2&type=line&xaxis=TIME&yaxis=CO2+%28PPM%29&yaxismax=1000000&yaxismin=0"></iframe></td>
+                    <td><iframe width="100%"height="260" style="border: 1px solid #CCCCCC;" src="https://thingspeak.com/channels/2225739/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=10&title=SOIL+MOISTURE&type=line&xaxis=TIME&yaxis=MOISTURE+PERCENT&yaxismax=100&yaxismin=0"></iframe></td>
+                    <td><iframe width="100%"height="260"  style="border: 1px solid #CCCCCC;" src="https://thingspeak.com/channels/2225739/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=10&title=TEMPERATURE&type=line&xaxis=TIME&yaxis=TEMP+%28C%29&yaxismax=50&yaxismin=0"></iframe></td>
+                    <td><iframe width="100%"height="260"  style="border: 1px solid #CCCCCC;" src="https://thingspeak.com/channels/2225739/charts/3?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=10&title=HUMIDITY+GRAPH&type=line&xaxis=TIME&yaxis=HUMIDITY+%28%25%29&yaxismax=100&yaxismin=0"></iframe></td>
+                    <td><iframe width="100%" height="260" style="border: 1px solid #CCCCCC;" src="https://thingspeak.com/channels/2225739/charts/4?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=10&title=CO2&type=line&xaxis=TIME&yaxis=CO2+%28PPM%29&yaxismax=1000000&yaxismin=0"></iframe></td>
                 </tr>
             </tbody>
         </table>
@@ -144,4 +165,6 @@
         <!-- Button placed at the bottom -->
         <center><a href="SEEDS.HTML"><button class="bottom-button">Next Page</button></a></center>
     </div>
-</body></html>a
+</body></html>
+
+rectifys
