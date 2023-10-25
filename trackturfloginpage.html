@@ -10,6 +10,54 @@
             padding: 20px; 
             font-family: "Poppins", sans-serif;
         }
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 90%;
+            padding: 20px 100px;
+            background: seagreen;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        
+        }
+
+        .logo {
+            font-size: 24px; /* Smaller font size for logo */
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .navigation-bar {
+           
+            display: flex;
+            justify-content: flex-end; /* Align right */
+        }
+
+        .navigation-bar a {
+            font-size: 16px; /* Smaller font size for links */
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 20px; /* Add margin to separate links */
+            position:relative;
+        }
+        .navigation-bar a::before {
+content: '';
+position:absolute;
+top:100%;
+left:0;
+width:0;
+height:2px;
+background:#fff;
+transition: .3s;
+        }
+        .navigation-bar a:hover::before{
+            width:100%;  
+        }
 
         .container {
             position: relative;
@@ -77,11 +125,37 @@
             .login-container {
                 width: 90%; /* Adjust for smaller screens */
             }
+            .header {
+                padding: 10px; /* Smaller padding for header */
+            }
+
+            .logo {
+                font-size: 20px; /* Adjust font size */
+            }
+
+            .navigation-bar {
+                justify-content: center; /* Center-align links */
+                margin-top: 10px; /* Add margin */
+            }
+
+            .navigation-bar a {
+                font-size: 14px; /* Smaller font size */
+                margin: 0 10px; /* Adjust margin for spacing */
+            }
         }
     </style>
 </head>
 
 <body>
+    <header class="header">
+        <a href="index.html" class="logo">Logo</a>
+        <nav class="navigation-bar">
+            <a href="homepage.html">Soil Data</a>
+            <a href="trackturfloginpage.html">Login</a>
+            <a href="OurTeam.html">Our Team</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
     <div class="container">
         <div class="login-container">
             <center>
@@ -94,7 +168,7 @@
             </div>
             <input type="text" placeholder="Username" id="username" required="">
             <input type="password" placeholder="Password" id="password" required="">
-           <a href = "homepage.html"> <button type="submit">Login</button></a>
+           <a href = "index.html"> <button type="submit">Login</button></a>
             <p></p>
             <center>
                
@@ -105,3 +179,4 @@
 
 
 </body></html>
+
