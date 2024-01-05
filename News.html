@@ -1,0 +1,151 @@
+<html><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            background-image: url('khet.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 20px;
+            overflow-y: scroll;
+            margin: 0; /* Remove default body margin */
+        }
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 90%;
+            padding: 20px 100px;
+            background: seagreen;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+        .logo {
+            font-size: 24px; /* Smaller font size for logo */
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+        }
+        .navigation-bar {
+            display: flex;
+            justify-content: flex-end; /* Align right */
+        }
+        .navigation-bar a {
+            font-size: 16px; /* Smaller font size for links */
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 20px; /* Add margin to separate links */
+            position: relative;
+        }
+
+        .navigation-bar a::before {
+            content: '';
+            position:absolute;
+            top:100%;
+            left:0;
+            width:0;
+            height:2px;
+            background:#fff;
+            transition: .3s;
+        }
+        .navigation-bar a:hover::before{
+            width:100%;  
+        }
+       
+        .thingspeak {
+            scale: .8  ;
+            align-content: left;
+            
+           
+        }
+        /* Hide scrollbar while allowing scrolling */
+        body::-webkit-scrollbar {
+            width: 0;
+        }
+        .heading-container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 20px;
+            border-radius: 5px;
+            margin: 80px 20px;
+        }
+        .heading-container h1,
+        .heading-container h3 {
+            margin: 0;
+        }
+        .overall-data-container {
+
+            margin-top: 20px;
+            margin-left: 10px;
+            margin-right:10px;
+            padding: 1px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        /* Add styles for the button */
+        .bottom-button {
+            display: block;
+            margin: 20px auto; /* Center align the button */
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        /* Media Query for smaller screens */
+        @media (max-width: 768px) {
+            .heading-container {
+                padding: 10px; /* Reduce padding on smaller screens */
+            }
+            .overall-data-container {
+                padding: 10px;
+            }
+            .header {
+                padding: 10px; /* Smaller padding for header */
+            }
+            .logo {
+                font-size: 20px; /* Adjust font size */
+            }
+            .navigation-bar {
+                justify-content: center; /* Center-align links */
+                margin-top: 10px; /* Add margin */
+            }
+            .navigation-bar a {
+                font-size: 14px; /* Smaller font size */
+                margin: 0 10px; /* Adjust margin for spacing */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">Logo</a>
+        <nav class="navigation-bar">
+            <a href="homepage.html">Soil Data</a>
+            <a href="trackturfloginpage.html">Login</a>
+            <a href="OurTeam.html">Our Team</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="#">News</a>
+        </nav>
+    </header>
+    <div class="heading-container">
+        <h1><b>Overall Data</b></h1>
+        <h3><b>Kindly Rotate Your Device Horizontally</b></h3>
+    </div>
+    <div class="overall-data-container">
+        <div class="thingspeak">
+        <!-- Place your content here -->
+      
+           
+        </div>
+        <!-- Button placed at the bottom -->
+        <center><a href=""><button class="bottom-button">Next Page</button></a></center>
+    </div>
+</body></html>
+
+rectifys
